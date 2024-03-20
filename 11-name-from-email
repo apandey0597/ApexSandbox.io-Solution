@@ -1,0 +1,6 @@
+public String nameFromEmail(String email) {
+    //Integer ind = email.indexOfIgnoreCase('@');
+    //return (email.substr())
+    email = email.toLowerCase('en');
+    return(email.substringBefore('.').capitalize()+ ' '+ email.substringBetween('.','@').capitalize());
+}
