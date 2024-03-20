@@ -1,0 +1,76 @@
+public Boolean companionPlants(List<String> plants) {
+
+
+    // Check if the list of plants is empty.
+
+    if (plants.isEmpty()) {
+
+        return true; // An empty list is considered true.
+
+    }
+
+    // Check if the list contains only one plant.
+
+    else if (plants.size() == 1){
+
+        return false; // A list with only one plant is considered false.
+
+    }
+
+    else {
+
+        // Define a map to store companion plant relationships.
+
+        Map<String, Set<String>> companionMap = new Map<String, Set<String>>();
+
+        // Define companion plant relationships in the map.
+
+        companionMap.put('lettuce', new Set<String>{'cucumbers', 'onions'});
+
+        companionMap.put('cucumbers', new Set<String>{'lettuce'});
+
+        companionMap.put('onions', new Set<String>{'lettuce', 'carrots', 'tomatoes'});
+
+        companionMap.put('carrots', new Set<String>{'onions'});
+
+        companionMap.put('tomatoes', new Set<String>{'onions'});
+
+        // Iterate through the list of plants.
+
+        for (Integer i = 0; i < plants.size() - 1; i++) {
+
+            String plant1 = plants[i];
+
+            String plant2 = plants[i + 1];
+
+            // Check if two adjacent plants are companions.
+
+            if (!areCompanions(companionMap, plant1, plant2)) {
+
+                return false; // If an invalid combination is found, return false.
+
+            }
+
+        }
+
+        // If all combinations are valid, return true.
+
+        return true;
+
+    }
+
+}
+
+// Helper function to check if two plants are companions.
+
+private Boolean areCompanions(Map<String, Set<String>> companionMap, String plant1, String plant2) {
+
+    Set<String> companions = companionMap.get(plant1);
+
+    // Check if plant2 is in the set of companions for plant1.
+
+    return companions != null && companions.contains(plant2);
+
+
+
+}
