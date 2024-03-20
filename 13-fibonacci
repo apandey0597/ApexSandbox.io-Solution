@@ -1,0 +1,18 @@
+public Integer fibonacci(Integer n) {
+    //code here
+    Integer num1 = 1;
+    Integer num2 = 1;
+    Integer i=2;
+    if(n <3 && n>0){
+        return 1;
+    }
+    else{
+    while (i<n){
+        integer num2tr = num2;
+        num2 = num1 + num2;
+        num1 = num2tr;
+        i++;
+    }
+    return num2;
+    }
+}
