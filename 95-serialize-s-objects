@@ -1,0 +1,20 @@
+public String getAccountsInJSONFormat(List<Account> accounts){
+  // code here
+  if(accounts!= null){
+   if(accounts.size()>0){
+    String jsonStr = '[';
+    for(Account acc : accounts){
+        if(jsonStr.length()>1){
+            jsonStr += ',';
+        }
+         jsonStr = jsonStr+JSON.serialize(acc,true);
+        System.debug('account'+jsonStr);
+    }
+    return (jsonStr+']');
+   }else{
+       return '[]';
+   }
+   }else
+   return 'null';
+  
+}
