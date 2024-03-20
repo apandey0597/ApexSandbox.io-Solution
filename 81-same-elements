@@ -1,5 +1,9 @@
 public Boolean sameElements(List<Integer> nums1, List<Integer> nums2) {
-    //code here
 
-   return(nums1.containsAll(nums2));
+   boolean flg = true;
+   for(Integer i : nums1){
+       if(!nums2.contains(i))
+       flg = false;
+   }
+
 }
