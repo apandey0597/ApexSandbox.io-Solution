@@ -4,9 +4,9 @@ public Boolean containsDuplicates(List<Integer> nums) {
     Set<Integer> s1 = new set<Integer>(nums);
     
     if(s1.size()==nums.size())
-    return true;
-    else
     return false;
+    else
+    return true;
     }else{
         return false;
     }
