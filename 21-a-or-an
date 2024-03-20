@@ -1,0 +1,9 @@
+public String aOrAn(String word) {
+    if(word.left(1) == 'a' || (word.left(1) == 'e') ||(word.left(1) == 'i') || (word.left(1)=='o') || (word.left(1)=='u')){
+            return ('an '+ word);
+    }
+            else {
+                return ('a ' + word);
+            }
+        
+}
