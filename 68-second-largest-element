@@ -1,0 +1,16 @@
+public Integer secondLargest(List<Integer> numbers) {
+    //code here
+    numbers.sort();
+    Boolean notReturned = true;
+    Integer sizeList = numbers.size();
+    while(notReturned){
+        if(numbers.get(sizeList -1)!= numbers.get(sizeList -2)){
+            notReturned = false;
+            return(numbers.get(sizeList-2));
+
+        }else{
+            sizeList--;
+        }
+    }
+    return null;
+}
