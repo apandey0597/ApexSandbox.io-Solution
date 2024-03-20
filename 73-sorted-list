@@ -1,0 +1,42 @@
+public boolean isSorted(List<Integer> numbers) {
+    //code here
+ if(numbers.size()<3){
+
+        return true;
+
+    }
+
+    Integer flagi = 1, flagd = 1;
+
+    Integer temp = numbers[0];
+
+        
+
+    for(Integer i =1;i<numbers.size();i++)
+
+    {
+
+        if(numbers[i]<temp){
+
+            flagd = 0;
+
+        }
+
+        if(numbers[i]>temp){
+
+            flagi=0;
+
+        }
+
+        if(flagi ==0 && flagd==0){
+
+            return false;
+
+        }
+
+        temp = numbers[i];
+
+    }
+
+    return true;    
+}
