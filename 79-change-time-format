@@ -1,0 +1,31 @@
+public String changeTimeFormat(String strTime) {
+    String hrs = strTime.substringBefore(':');
+    string mins = strTime.substringAfter(':');
+    Integer hr = Integer.valueOf(hrs);
+    Integer mn = Integer.valueOf(mins);
+    if(hr>=12)
+    {
+        Integer hr2 = hr -12;
+        if(hr2>0){
+            if(hr2<10){
+                return ('0'+hr2.format()+':'+mins+ ' PM');
+            }
+            else{
+        return (hr2.format()+':'+mins+ ' PM');
+        }
+        }
+        else if(hr2 == 0){
+                return ('12'+':'+mins+ ' PM');
+            }
+        else{
+            return ' ';
+        }
+        
+
+    }else {
+        if(hr > 0)
+        return (strTime + ' AM');
+        else
+        return ('12'+':'+mins+ ' AM');
+    }
+}
