@@ -1,0 +1,29 @@
+public Integer nextPrime(Integer num) {
+    //code here
+    Boolean flg = false;
+    if(num <0){
+        num = 1;
+    }
+    do{
+        num = num + 1;
+        ///prime logic
+        flg = isPrime(num);
+        if(flg){
+            return num;
+        }
+
+        }while(true);
+        return null;
+}
+public Boolean isPrime(Integer num) {
+    //code here
+    Integer c=0;
+    for(Integer i=2;i<num;i++){
+        if(Math.mod(num,i)==0){
+            c++;
+        }
+    }
+    if(c>0)
+    return false;
+    else return true;
+}
