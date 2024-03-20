@@ -1,0 +1,6 @@
+public static Integer findLargest(Integer num1, Integer num2, Integer num3) {
+	//code here
+    Integer num4 = Math.max(num1, num2);
+    Integer num5 = Math.max(num4, num3);
+    return num5;
+}
