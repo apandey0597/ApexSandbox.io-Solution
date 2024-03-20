@@ -1,0 +1,20 @@
+public List<Integer> fibonacciSeries(Integer n) {
+    //code here
+    List<Integer> fibSeries = new List<Integer>();
+    Integer num1 = 1;
+    Integer num2 = 1;
+    Integer i=0;
+    
+    while (i<n){
+        fibSeries.add(num1);
+        integer num2tr = num2;
+        num2 = num1 + num2;
+        
+        num1 = num2tr;
+        i++;
+    }
+    
+
+    return fibSeries;
+
+}
