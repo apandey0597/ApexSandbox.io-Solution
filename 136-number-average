@@ -1,0 +1,11 @@
+public Decimal average(List<Decimal> numbers){
+    // your code here
+    Decimal sum = 0.00;
+    Integer count = 0;
+    for(Decimal d : numbers){
+        sum = sum + d;
+        count ++;
+    }
+    return (sum.divide(count,2));
+
+}
