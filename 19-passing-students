@@ -1,0 +1,13 @@
+public Boolean isPassed(Boolean passedExam, Boolean passedAssignments, Boolean passedProject) {
+    Integer c=0;
+    if(passedExam)
+    c++;
+    if(passedAssignments)
+    c++;
+    if(passedProject)
+    c++;
+    if(c>=2)
+    return true;
+    else
+    return false;
+}
