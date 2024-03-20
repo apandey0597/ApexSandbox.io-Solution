@@ -11,8 +11,8 @@ public Boolean sameElements(List<Integer> nums1, List<Integer> nums2) {
        flg = false;
    }*/
 
-   Set<Integer> s1 = new Set<Ineteger>(nums1);
-   Set<Integer> s2 = new Set<Ineteger>(nums2);
+   Set<Integer> s1 = new Set<Integer>(nums1);
+   Set<Integer> s2 = new Set<Integer>(nums2);
    flg = s1.containsAll(s2);
     return flg;
 }
