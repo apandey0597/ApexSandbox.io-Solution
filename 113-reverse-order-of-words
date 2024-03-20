@@ -1,0 +1,20 @@
+public String reverseWordsInASentence(String sentence){
+    //your flawless code here
+    if(sentence == null){
+        return null;
+    }
+    
+    String outputStr = '';
+    String reverSentence = sentence.reverse();
+    String[] strArr = reverSentence.split(' ');
+    Integer arrlen = strArr.size();
+    for(Integer i=0; i<arrlen; i++)
+    {
+        outputStr = outputStr + strArr[i].reverse();
+        if(!String.isblank(outputStr)){
+            outputStr = outputStr + ' ';
+        }
+    }
+    return outputStr.trim();
+    
+}
