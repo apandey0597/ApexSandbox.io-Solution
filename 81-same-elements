@@ -1,7 +1,7 @@
 public Boolean sameElements(List<Integer> nums1, List<Integer> nums2) {
 
-   boolean flg = true;
-   for(Integer i : nums1){
+   boolean flg = false;
+   /*for(Integer i : nums1){
        if(!nums2.contains(i))
        flg = false;
    }
@@ -9,6 +9,10 @@ public Boolean sameElements(List<Integer> nums1, List<Integer> nums2) {
    for(Integer i : nums2){
        if(!nums1.contains(i))
        flg = false;
-   }
+   }*/
+
+   Set<Integer> s1 = new Set<Ineteger>(nums1);
+   Set<Integer> s2 = new Set<Ineteger>(nums2);
+   flg = s1.containsAll(s2);
     return flg;
 }
