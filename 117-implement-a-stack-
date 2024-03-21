@@ -8,7 +8,7 @@ public class Stack {
     
     public Object pop() {
         //implement pop
-       return objList.remove(objList.size()-1);
+       return objList.remove(objList.size());
     }
     
     public Integer size() {
@@ -18,7 +18,7 @@ public class Stack {
     
     public Object peek(){
         //implement peek
-       return objList.get(objList.size()-1);
+       return objList.get(objList.size());
     }
     
     public Boolean isEmpty() {
