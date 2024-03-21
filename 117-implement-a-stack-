@@ -18,7 +18,7 @@ public class Stack {
     
     public Object peek(){
         //implement peek
-        if(objList.size()>0)
+        if(objList.size()>0 && objList != null)
        return objList.get(objList.size()-1);
        else
        return null;
