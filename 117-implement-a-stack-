@@ -23,6 +23,6 @@ public class Stack {
     
     public Boolean isEmpty() {
         //implement isEmpty
-        objList.isEmpty();
+       return objList.isEmpty();
     }
 }
