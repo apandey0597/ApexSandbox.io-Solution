@@ -18,7 +18,10 @@ public class Stack {
     
     public Object peek(){
         //implement peek
-       //return objList.get(objList.size()-1);
+        if(objList.size()>0)
+       return objList.get(objList.size()-1);
+       else
+       return null;
     }
     
     public Boolean isEmpty() {
