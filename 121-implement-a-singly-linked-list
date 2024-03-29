@@ -1,0 +1,26 @@
+public class LinkedList{
+    private List<Integer> intList;
+    public void addToFront(Integer value){
+        intList.add(value);
+    }
+    public Integer removeFromFront(){
+        if(intList.size()>0 && intList != null)
+       return intList.remove(intList.size()-1);
+       else
+       return null;
+    }
+    public void addToTail(Integer value){}
+    public Integer removeFromTail(){}
+    public Integer size(){
+        return intList.size();
+    }   
+
+    public LinkedList(){
+        intList = new List<Integer>();
+    }
+}
+
+public class Node{
+    Integer data;
+    Node next;
+}
