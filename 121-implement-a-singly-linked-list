@@ -25,8 +25,7 @@ public class LinkedList{
     }   
 
     public LinkedList(){
-        this.head = null;
-        this.tail = null;
+       intList = new List<Integer>();
     }
 }
 
