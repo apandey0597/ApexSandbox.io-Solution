@@ -1,7 +1,6 @@
 public class LinkedList{
      List<Integer> intList;
-     Node head;
-     Node tail;
+     
     public void addToFront(Integer value){
         intList.add(0,value);
         
