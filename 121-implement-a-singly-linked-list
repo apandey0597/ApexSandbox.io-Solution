@@ -2,6 +2,9 @@ public class LinkedList{
      List<Integer> intList;
      
     public void addToFront(Integer value){
+        if(intList.size()==0){
+            intList.add(value);
+        }else
         intList.add(0,value);
         
     }
