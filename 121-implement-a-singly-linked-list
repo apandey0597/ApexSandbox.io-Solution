@@ -1,26 +1,41 @@
 public class LinkedList{
-    private List<Integer> intList;
+     List<Integer> intList;
+     Node head;
+     Node tail;
     public void addToFront(Integer value){
-        intList.add(value);
+        intList.add(0,value);
+        
     }
     public Integer removeFromFront(){
+        if(intList.size()>0 && intList != null)
+       return intList.remove(0);
+       else
+       return null;
+    }
+    public void addToTail(Integer value){
+        intList.add(value);
+    }
+    public Integer removeFromTail(){
         if(intList.size()>0 && intList != null)
        return intList.remove(intList.size()-1);
        else
        return null;
     }
-    public void addToTail(Integer value){}
-    public Integer removeFromTail(){}
     public Integer size(){
         return intList.size();
     }   
 
     public LinkedList(){
-        intList = new List<Integer>();
+        this.head = null;
+        this.tail = null;
     }
 }
 
 public class Node{
     Integer data;
     Node next;
+
+    public Node(Integer data){
+        this.data = data;
+    }
 }
