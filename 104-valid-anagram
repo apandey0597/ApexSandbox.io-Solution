@@ -9,7 +9,7 @@ public boolean isAnagram(String s1, String s2) {
 public List<String> breakStr(String s){
     List<String> strList = new List<String>();
     for(Integer i=0; i<s.length(); i++){
-        String s1 = s.substr(i,i+1);
+        String s1 = s.substring(i,i+1);
         strList.add(s1);
     }
     strList.sort();
