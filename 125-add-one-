@@ -8,6 +8,7 @@ public void plusOne(List<Integer> numbers) {
        ///
        if(last<9){
            numbers.set(i,(last+1));
+           break;
        }else if(last==9){
            if(penultimate<9){
                  numbers.set(i,0);
