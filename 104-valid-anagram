@@ -1,10 +1,13 @@
 public boolean isAnagram(String s1, String s2) {
     //Code here
+    if(s1 != null && s2 != null){
     List<String> firstStr = new List<String>();
     List<String> secondStr = new List<String>();
     firstStr = breakStr(s1);
     secondStr = breakStr(s2);
     return(firstStr.equals(secondStr));
+    }else
+    return null;
 }
 public List<String> breakStr(String s){
     List<String> strList = new List<String>();
