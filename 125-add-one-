@@ -11,7 +11,7 @@ public void plusOne(List<Integer> numbers) {
        }else if(last==9){
            if(penultimate<9){
                  numbers.set(size-1,0);
-                 numbers.set(size-2, penultimate+1)
+                 numbers.set(size-2, penultimate+1);
 
            }
        }
