@@ -1,0 +1,9 @@
+public Boolean isPalindrome(String str){
+//code here
+String lowerStr = str.toLowercase();
+Pattern nonAlphanumeric = Pattern.compile('[^a-zA-Z0-9]');
+Matcher matcher = nonAlphanumeric.matcher(lowerStr);
+String finalStr = matcher.replaceAll(''); 
+String compStr = finalStr.reverse();
+return (compStr.equals(finalStr));
+}
