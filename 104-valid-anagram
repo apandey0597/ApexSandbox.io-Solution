@@ -1,0 +1,17 @@
+public boolean isAnagram(String s1, String s2) {
+    //Code here
+    List<String> firstStr = new List<String>();
+    List<String> secondStr = new List<String>();
+    firstStr = breakStr(s1);
+    secondStr = breakStr(s2);
+    return(firstStr.equals(secondStr));
+}
+public List<String> breakStr(String s){
+    List<String> strList = new List<String>();
+    for(Integer i=0; i<s.length(); i++){
+        String s1 = s.substr(i,i+1);
+        strList.add(s1);
+    }
+    strList.sort();
+    return strList;
+}
