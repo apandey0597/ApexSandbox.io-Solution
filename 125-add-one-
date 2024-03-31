@@ -1,9 +1,10 @@
 public void plusOne(List<Integer> numbers) {
     // code here
     Integer size = numbers.size();
-    for(Integer i = numbers.size()-1; i>=0; i--){
+    for(Integer i = size-1; i>=0; i--){
 
        Integer last = numbers.get(i);
+       if(size>1)
        Integer penultimate = numbers.get(i-1);
        ///
        if(last<9){
