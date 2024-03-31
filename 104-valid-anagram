@@ -7,7 +7,7 @@ public boolean isAnagram(String s1, String s2) {
     secondStr = breakStr(s2);
     return(firstStr.equals(secondStr));
     }else
-    return null;
+    return false;
 }
 public List<String> breakStr(String s){
     List<String> strList = new List<String>();
