@@ -4,14 +4,15 @@ public void plusOne(List<Integer> numbers) {
     for(Integer i = size-1; i>=0; i--){
 
        Integer last = numbers.get(i);
-       if(size>1)
+       if(size>1){
        Integer penultimate = numbers.get(i-1);
+       }
        ///
        if(last<9){
            numbers.set(i,(last+1));
            break;
        }else if(last==9){
-           if(penultimate<9){
+           if(size>1 && penultimate<9){
                  numbers.set(i,0);
                  numbers.set(i-2, penultimate+1);
 
