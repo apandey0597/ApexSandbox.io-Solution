@@ -1,0 +1,26 @@
+public static Integer search(List<Opportunity> opportunities, Integer target){
+    // solution here
+    Integer first = 0;
+
+    Integer last = opportunities.size()-1;
+
+    while (first <= last) {
+
+        Integer middle = first + (last - first) / 2;    
+
+        if (target == opportunities[middle].Amount) 
+
+            return middle;
+
+        else if (target < opportunities[middle].Amount) 
+
+            last = middle - 1;
+
+        else
+
+            first = middle + 1;
+
+    }
+
+    return -1;
+}
