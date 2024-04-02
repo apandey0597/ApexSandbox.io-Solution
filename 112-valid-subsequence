@@ -1,0 +1,30 @@
+public Boolean isSubSequence(String s1, String s2){
+    //code here
+     Integer s1Pointer = 0;
+
+    Integer s2Pointer = 0;
+
+    Integer leftBound = s1.length();
+
+    Integer rightBound = s2.length();
+
+    while(s1Pointer < leftBound && s2Pointer < rightBound){
+
+        //Basic two pointer problem 
+
+        if(s1.charAt(s1Pointer) == s2.charAt(s2Pointer)){
+
+            s1Pointer += 1; // we have a common character to incrment the s1 pointer 
+
+        }else {
+
+            s2Pointer += 1; // move s2 until there is another match on s1
+
+        }       
+
+    }
+
+    return s1Pointer == leftBound; // if the s1  incrmented over every value 
+
+
+}
