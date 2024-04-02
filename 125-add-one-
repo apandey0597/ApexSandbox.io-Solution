@@ -1,24 +1,15 @@
 public void plusOne(List<Integer> numbers) {
     // code here
-    Integer size = numbers.size();
-    for(Integer i = size-1; i>=0; i--){
-
-       Integer last = numbers.get(i);
-       if(size>1){
-       Integer penultimate = numbers.get(i-1);
-       }
-       ///
-       if(last<9){
-           numbers.set(i,(last+1));
-           break;
-       }else if(last==9){
-           if(size>1 && penultimate<9){
-                 numbers.set(i,0);
-                 numbers.set(i-2, penultimate+1);
-
-           }
-       }
-       ///
-       
+    Integer size = numbers.size()-1;
+    
+    numbers.set(size,numbers.get(size)+1);
+    for(Integer i = size; i>=0; i--){
+        if(numbers.get(i) >= 10){
+            Integer temp = numbers.get(i);
+            numbers.set(i,0);
+            Integer diff = temp - 9;
+            numbers.set(i-1, numbers.get(i-1)+diff);
+        }
     }
+    
 }
